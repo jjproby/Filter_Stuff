@@ -46,6 +46,7 @@ int isLetter( char c ) {
 int main (int argc, char** argv ) {
 	char c;
 	int space = 1;
+	int character = 1;
 	
 	while( scanf("%c", &c ) != EOF ) {
 		if (isLowercaseLetter(c)) {
@@ -56,10 +57,18 @@ int main (int argc, char** argv ) {
 		}//if
 		if (isLetter(c)) {
 		  if (space % 5 == 0){
+		    character = character + 2;
 		    printf( "%c ", c);
+		    if (character % 47 == 0) {
+			printf("\n");
+			}//if
 		  }//if
 		  else {
+		    character = character + 1;
 		    printf( "%c", c );
+		    if (character % 47 == 0) {
+			printf( "\n");
+			}//if
 		  }//else
 		  space++;
 		}//if
