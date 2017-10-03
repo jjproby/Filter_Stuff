@@ -59,16 +59,14 @@ int main (int argc, char** argv ) {
 		  if (space % 5 == 0){
 		    character = character + 2;
 		    printf( "%c ", c);
-		    if (character % 47 == 0) {
-			printf("\n");
+		    if (character > 47) {
+				printf("\n");
+				character = 0;
 			}//if
 		  }//if
 		  else {
 		    character = character + 1;
 		    printf( "%c", c );
-		    if (character % 47 == 0) {
-			printf( "\n");
-			}//if
 		  }//else
 		  space++;
 		}//if
